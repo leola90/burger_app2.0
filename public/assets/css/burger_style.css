@@ -1,0 +1,25 @@
+body {
+    background-color: orange;
+}
+
+h1 {
+    color: red;
+    text-align: center;
+}
+
+.btn {
+    background-color: lightblue;
+}
+
+p{
+    text-align: center;
+}
+
+.create-form {
+    text-align: center;
+}
+
+ul {
+    text-align: left;
+}
+

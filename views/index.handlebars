@@ -1,0 +1,59 @@
+    <div class="row" id="burger submitted">
+        <div class="col">
+            <div class="row order-row">
+                <h1>Eat-Da-Burger!</h1>
+            </div>
+            <div class="row order-row">
+                <form class="create-form">
+
+                <div class="form-group">
+                    <label for="bgr"></label>
+                    <input type="text" class="form-control" id="burger-name" name="name" placeholder="Burger Name">
+                </div>
+                <button type="submit" class="btn btn-success">Submit Order</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row" id="devoured-burgers">
+
+        <div class="col">
+            <div class="row heading">
+                <h2>Burgers Submitted!</h2>
+            </div>
+            <ul>
+                {{#each burgers}}
+                    {{#unless devoured}}
+                        <div class="card">
+                            <p id="new-burger">{{id}}. {{burger_name}}
+                            <button type="button" class="btn btn-success devour-status" data-id="{{id}}" data-newDevour="true">Devour it!</button>
+                            </p>
+                        </div> 
+                    {{/unless}}
+                {{/each}}
+            </ul>
+        </div>
+
+        <div class="col">
+            <div class="row heading">
+                <h2>Burgers Devoured!</h2>
+            </div>
+            <ul>
+                {{#each burgers}}
+                    {{#if devoured}}
+                        <div class="card">
+                            <p id="eaten">{{id}}. {{burger_name}}</p>
+                        </div> 
+                    {{/if}}
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+
+
+
+ 
+
+
+
